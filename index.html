@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NM Auto Details — Premium Detailing in New Mexico</title>
+  <meta name="description" content="NM Auto Details offers premium auto detailing in New Mexico. Interior, exterior, and full packages. Live open/closed status, easy booking, and friendly service." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'ui-serif', 'Georgia', 'serif'],
+          },
+          colors: {
+            luxe: {
+              gold: '#D4AF37',
+              goldSoft: '#E9CA6B',
+              goldDark: '#A78928',
+              night: '#0B1020',
+              ink: '#0f172a',
+              slate: '#111827'
+            }
+          },
+          boxShadow: {
+            glow: '0 10px 30px rgba(212,175,55,0.25)',
+          },
+          backgroundImage: {
+            'hero-grad': 'radial-gradient(1200px 600px at 80% -10%, rgba(212,175,55,.14), transparent 60%), radial-gradient(800px 500px at -10% -20%, rgba(66,153,225,.15), transparent 60%), linear-gradient(180deg, #0B1020 0%, #0f172a 100%)',
+            'card-grad': 'linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02))',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Tiny polish for the gold shimmer on hover */
+    .gold-hover:hover { filter: drop-shadow(0 6px 18px rgba(212,175,55,0.35)); }
+    .backdrop-glass { backdrop-filter: saturate(120%) blur(8px); }
+    .no-scroll { overflow: hidden; }
+  </style>
+</head>
+<body class="bg-luxe-ink text-white antialiased">
+  <!-- Top Announcement / Open Status -->
+  <div class="w-full bg-luxe-slate/60 backdrop-glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-sm">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300" id="openPill">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span id="openText">Checking status…</span>
+        </span>
+        <span class="hidden sm:inline text-white/70">Serving New Mexico — Mountain Time</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a class="text-white/80 hover:text-white transition" href="tel:+15056887487">Call: (505) 688-7487</a>
+        <button id="copyPhone" class="text-luxe-gold hover:text-luxe-goldSoft transition">Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-luxe-ink/85 backdrop-glass border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 group">
+        <!-- Simple emblem -->
+        <span class="relative w-10 h-10 rounded-full bg-gradient-to-br from-luxe-gold/20 to-luxe-gold/5 border border-luxe-gold/30 flex items-center justify-center shadow-glow">
+          <svg width="26" height="18" viewBox="0 0 26 18" fill="none" class="text-luxe-gold">
+            <path d="M2 11c2.5-4 7-6 12-6 2.5 0 5 .5 7 1.5 1.5.7 3 2.5 3 4.5 0 1-.7 2-2 2H2.5C1.7 13 1 12.3 1 11.5 1 11.3 1.1 11 2 11Z" fill="currentColor" opacity="0.8"/>
+            <circle cx="8" cy="13" r="2" fill="currentColor"/>
+            <circle cx="18" cy="13" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <div>
+          <div class="font-extrabold tracking-wide text-white text-lg leading-5">NM Auto Details</div>
+          <div class="text-xs text-white/60">Premium Detailing • New Mexico</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="#services" class="text-white/80 hover:text-white transition">Services</a>
+        <a href="#packages" class="text-white/80 hover:text-white transition">Packages</a>
+        <a href="#gallery" class="text-white/80 hover:text-white transition">Gallery</a>
+        <a href="#reviews" class="text-white/80 hover:text-white transition">Reviews</a>
+        <a href="#hours" class="text-white/80 hover:text-white transition">Hours</a>
+        <a href="#contact" class="text-white/80 hover:text-white transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:+15056887487" class="hidden sm:inline-flex items-center gap-2 bg-luxe-gold text-black font-semibold px-4 py-2 rounded-full shadow-glow gold-hover transition">
+          <svg width="16" height="16" viewBox="0 0 24 24" class="text-black"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C11.07 22 2 12.93 2 2a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+          Call Now
+        </a>
+        <button class="inline-flex md:hidden p-2 rounded-md bg-white/5 hover:bg-white/10 transition" id="menuToggle" aria-label="Open menu">
+          <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </button>
+        <button class="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 hover:bg-white/5 transition book-btn" data-service="">
+          Book Online
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-luxe-ink/95">
+      <div class="px-4 py-3 flex flex-col gap-3">
+        <a href="#services" class="text-white/90 hover:text-white transition">Services</a>
+        <a href="#packages" class="text-white/90 hover:text-white transition">Packages</a>
+        <a href="#gallery" class="text-white/90 hover:text-white transition">Gallery</a>
+        <a href="#reviews" class="text-white/90 hover:text-white transition">Reviews</a>
+        <a href="#hours" class="text-white/90 hover:text-white transition">Hours</a>
+        <a href="#contact" class="text-white/90 hover:text-white transition">Contact</a>
+        <button class="mt-1 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 hover:bg-white/5 transition book-btn" data-service="">
+          Book Online
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative bg-hero-grad">
+    <div class="absolute inset-0 pointer-events-none">
+      <!-- Decorative gold arcs -->
+      <svg class="absolute right-[-120px] top-10 w-[420px] opacity-30" viewBox="0 0 400 400" fill="none">
+        <circle cx="200" cy="200" r="160" stroke="#D4AF37" stroke-opacity="0.3" stroke-width="1"/>
+        <circle cx="200" cy="200" r="120" stroke="#D4AF37" stroke-opacity="0.25" stroke-width="1"/>
+        <circle cx="200" cy="200" r="80" stroke="#D4AF37" stroke-opacity="0.2" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-16 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-luxe-gold/80 mb-4">
+          <span class="w-1.5 h-1.5 rounded-full bg-luxe-gold"></span> New Mexico • Premium Care
+        </div>
+        <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl leading-tight">
+          Showroom Shine,<br class="hidden sm:block" />
+          <span class="text-luxe-gold">Every Single Time.</span>
+        </h1>
+        <p class="mt-5 text-white/70 max-w-xl">
+          Interior, exterior, and full-service detailing done right. Friendly, meticulous, and professional—because your car deserves the best.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <button class="book-btn inline-flex items-center gap-2 bg-luxe-gold text-black font-semibold px-5 py-3 rounded-full shadow-glow gold-hover transition" data-service="">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-black"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V6a2 2 0 00-2-2zm0 14H5V10h14v8z"/></svg>
+            Book Now
+          </button>
+          <a href="tel:+15056887487" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/15 hover:bg-white/5 transition">
+            <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C11.07 22 2 12.93 2 2a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.2 2.2z"/></svg>
+            Call (505) 688-7487
+          </a>
+          <a href="#services" class="inline-flex items-center gap-2 text-white/80 hover:text-white transition">
+            <span>See Services</span>
+            <svg width="16" height="16" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+          </a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs text-white/70">
+          <div class="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+            5-Star Care
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 2L1 21h22L12 2zm0 3.84L19.53 19H4.47L12 5.84zM11 10h2v5h-2zm0 6h2v2h-2z"/></svg>
+            Fully Insured
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 22a2 2 0 01-2-2h4a2 2 0 01-2 2zm6-6V9a6 6 0 10-12 0v7l-2 2v1h16v-1l-2-2z"/></svg>
+            Secure & Trusted
+          </div>
+          <div class="flex items-center gap-2 bg-white/5 rounded-lg px-3 py-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 2a5 5 0 015 5v2h1a3 3 0 013 3v7H3v-7a3 3 0 013-3h1V7a5 5 0 015-5z"/></svg>
+            Friendly Team
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual (SVG Car + shine) -->
+      <div class="relative">
+        <div class="relative bg-white/5 rounded-2xl border border-white/10 overflow-hidden shadow-xl">
+          <div class="absolute inset-0 bg-gradient-to-br from-luxe-gold/10 via-transparent to-transparent pointer-events-none"></div>
+          <div class="aspect-[16/10] sm:aspect-[16/9] relative flex items-center justify-center">
+            <!-- Stylized car SVG illustration -->
+            <svg viewBox="0 0 900 450" class="w-full h-full">
+              <defs>
+                <linearGradient id="paint" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#D4AF37"/>
+                  <stop offset="1" stop-color="#E9CA6B"/>
+                </linearGradient>
+              </defs>
+              <rect width="900" height="450" fill="#0B1020"/>
+              <g opacity="0.9">
+                <path d="M120 280c60-110 220-160 380-160 84 0 168 16 224 48 44 24 72 58 72 85 0 21-14 36-34 38l-615 6c-16 0-27-11-27-24 0-3 0-5 0-7z" fill="url(#paint)" fill-opacity="0.25"/>
+                <path d="M170 280c40-82 176-118 330-118 67 0 135 12 180 35 35 18 57 42 57 62 0 14-9 24-23 25l-516 4c-12 0-20-8-20-18 0-2 0-4 0-6z" fill="url(#paint)" fill-opacity="0.35"/>
+                <circle cx="330" cy="300" r="32" fill="#D4AF37"/>
+                <circle cx="640" cy="300" r="32" fill="#D4AF37"/>
+              </g>
+              <g opacity="0.9">
+                <circle cx="780" cy="80" r="4" fill="#E9CA6B">
+                  <animate attributeName="opacity" values="1;0.2;1" dur="2.2s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="820" cy="140" r="3" fill="#E9CA6B">
+                  <animate attributeName="opacity" values="0.3;1;0.3" dur="2.8s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="720" cy="120" r="3" fill="#E9CA6B">
+                  <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+                </circle>
+              </g>
+            </svg>
+            <div class="absolute bottom-3 left-3 bg-black/40 text-white/90 text-xs px-3 py-1.5 rounded-full border border-white/10">
+              Sample Image • Replace with your photos
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl">Thoughtful Services, Flawless Results</h2>
+        <p class="mt-3 text-white/70">From a quick refresh to a deep transformation—pick what your vehicle needs today.</p>
+      </div>
+
+      <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card Template -->
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M3 12h18v2H3zM4 8h16v2H4zM6 4h12v2H6z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Exterior Detail</h3>
+              <p class="text-white/60 text-sm">Foam wash, decontamination, wax/sealant.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Hand wash & dry</li>
+            <li>Wheel & tire care</li>
+            <li>Gloss boost</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">From $99</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Exterior Detail">Book</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 3l4 8H8l4-8zm0 18l-4-8h8l-4 8z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Interior Detail</h3>
+              <p class="text-white/60 text-sm">Vacuum, steam clean, protect.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Interior vacuum & wipe down</li>
+            <li>Deep clean plastics & vents</li>
+            <li>Stain spot treatment</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">From $129</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Interior Detail">Book</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M4 6h16v12H4z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Full Detail</h3>
+              <p class="text-white/60 text-sm">Complete inside & out transformation.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Exterior + Interior combo</li>
+            <li>Trim & glass treatment</li>
+            <li>Final inspection</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">From $219</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Full Detail">Book</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 3l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1 3-6z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Ceramic Coating</h3>
+              <p class="text-white/60 text-sm">Durable protection & deep gloss.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Multi-year protection</li>
+            <li>Hydrophobic finish</li>
+            <li>Paint decontamination</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">By quote</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Ceramic Coating">Book</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M3 7h18v2H3zm2 8h14v2H5z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Paint Correction</h3>
+              <p class="text-white/60 text-sm">Swirl & scratch reduction.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Gloss restoration</li>
+            <li>Stage-based polishing</li>
+            <li>Safe techniques</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">By quote</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Paint Correction">Book</button>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 hover:shadow-xl hover:shadow-black/20 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-11 h-11 rounded-xl bg-luxe-gold/15 border border-luxe-gold/30 flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" class="text-luxe-gold"><path fill="currentColor" d="M3 4h18v4H3zm2 6h14v10H5z"/></svg>
+            </span>
+            <div>
+              <h3 class="font-bold">Headlight Restoration</h3>
+              <p class="text-white/60 text-sm">Clarity & protection.</p>
+            </div>
+          </div>
+          <ul class="mt-4 text-sm text-white/70 space-y-2">
+            <li>Yellowing removal</li>
+            <li>UV sealant</li>
+            <li>Enhanced visibility</li>
+          </ul>
+          <div class="mt-6 flex items-center justify-between">
+            <span class="text-white/60 text-sm">From $69</span>
+            <button class="book-btn text-luxe-gold hover:text-luxe-goldSoft transition" data-service="Headlight Restoration">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl">Simple, Transparent Packages</h2>
+          <p class="text-white/70 mt-2">Pricing varies by size and condition. No surprises, just great work.</p>
+        </div>
+        <div class="text-sm text-white/60">
+          Need help choosing? <button class="underline hover:text-white transition book-btn" data-service="">We’ll guide you</button>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Express -->
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Express</h3>
+            <span class="text-white/60 text-sm">1–2 hrs</span>
+          </div>
+          <p class="text-white/70 text-sm mt-1">Quick refresh for well-kept vehicles.</p>
+          <div class="mt-5 text-3xl font-extrabold">$99+</div>
+          <ul class="mt-5 text-sm text-white/70 space-y-2">
+            <li>Basic exterior wash</li>
+            <li>Interior vacuum & wipe</li>
+            <li>Windows & tire shine</li>
+          </ul>
+          <button class="mt-6 w-full book-btn bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 transition" data-service="Express Package">Book Express</button>
+        </div>
+
+        <!-- Full -->
+        <div class="rounded-2xl border border-luxe-gold/40 bg-gradient-to-b from-luxe-gold/10 to-transparent p-6 shadow-glow">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Full Detail</h3>
+            <span class="text-white/60 text-sm">3–5 hrs</span>
+          </div>
+          <p class="text-white/70 text-sm mt-1">Inside and out with protection.</p>
+          <div class="mt-5 text-3xl font-extrabold text-luxe-gold">$219+</div>
+          <ul class="mt-5 text-sm text-white/80 space-y-2">
+            <li>Paint decon + sealant</li>
+            <li>Deep interior clean</li>
+            <li>Trim & glass care</li>
+          </ul>
+          <button class="mt-6 w-full book-btn bg-luxe-gold text-black font-semibold rounded-xl py-3 hover:opacity-95 transition" data-service="Full Detail Package">Book Full Detail</button>
+        </div>
+
+        <!-- Premium -->
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6">
+          <div class="flex items-center justify-between">
+            <h3 class="font-bold text-lg">Premium</h3>
+            <span class="text-white/60 text-sm">Full day</span>
+          </div>
+          <p class="text-white/70 text-sm mt-1">For vehicles needing extra love.</p>
+          <div class="mt-5 text-3xl font-extrabold">$399+</div>
+          <ul class="mt-5 text-sm text-white/70 space-y-2">
+            <li>Correction & protection</li>
+            <li>Interior restoration</li>
+            <li>Premium finishes</li>
+          </ul>
+          <button class="mt-6 w-full book-btn bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl py-3 transition" data-service="Premium Package">Book Premium</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl">Before & After</h2>
+          <p class="text-white/70 mt-2">Tap to see the transformation.</p>
+        </div>
+        <div class="text-sm text-white/60">Replace with real photos anytime.</div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- One item -->
+        <div class="rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="relative group cursor-pointer toggle-ba" tabindex="0" role="button" aria-label="Toggle before after">
+            <div class="aspect-[16/10]">
+              <!-- Before -->
+              <svg viewBox="0 0 900 560" class="w-full h-full block">
+                <defs>
+                  <linearGradient id="gr1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#1f2937"/>
+                    <stop offset="1" stop-color="#0b1020"/>
+                  </linearGradient>
+                </defs>
+                <rect width="900" height="560" fill="url(#gr1)"/>
+                <text x="36" y="60" fill="#ffffffaa" font-size="24">Before</text>
+                <circle cx="450" cy="280" r="210" fill="#111827"/>
+                <rect x="250" y="260" width="400" height="40" rx="20" fill="#374151"/>
+                <circle cx="350" cy="360" r="36" fill="#374151"/>
+                <circle cx="570" cy="360" r="36" fill="#374151"/>
+              </svg>
+              <!-- After overlay -->
+              <div class="absolute inset-0 after-layer pointer-events-none">
+                <svg viewBox="0 0 900 560" class="w-full h-full">
+                  <defs>
+                    <linearGradient id="gr2" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#0b1020"/>
+                      <stop offset="1" stop-color="#1f2937"/>
+                    </linearGradient>
+                    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#D4AF37"/>
+                      <stop offset="1" stop-color="#E9CA6B"/>
+                    </linearGradient>
+                  </defs>
+                  <rect width="900" height="560" fill="url(#gr2)"/>
+                  <text x="36" y="60" fill="#ffffffcc" font-size="24">After</text>
+                  <circle cx="450" cy="280" r="210" fill="#0b1020"/>
+                  <rect x="250" y="260" width="400" height="40" rx="20" fill="url(#shine)"/>
+                  <circle cx="350" cy="360" r="36" fill="url(#shine)"/>
+                  <circle cx="570" cy="360" r="36" fill="url(#shine)"/>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/40 text-white/80 text-xs px-3 py-1.5 rounded-full border border-white/10">Tap to toggle</div>
+          </div>
+        </div>
+
+        <!-- Repeat simple variants -->
+        <div class="rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="relative group cursor-pointer toggle-ba" tabindex="0" role="button" aria-label="Toggle before after">
+            <div class="aspect-[16/10]">
+              <svg viewBox="0 0 900 560" class="w-full h-full block">
+                <rect width="900" height="560" fill="#0b1020"/>
+                <text x="36" y="60" fill="#ffffffaa" font-size="24">Before</text>
+                <rect x="160" y="200" width="580" height="200" rx="20" fill="#1f2937"/>
+                <circle cx="300" cy="380" r="28" fill="#374151"/>
+                <circle cx="600" cy="380" r="28" fill="#374151"/>
+              </svg>
+              <div class="absolute inset-0 after-layer pointer-events-none">
+                <svg viewBox="0 0 900 560" class="w-full h-full">
+                  <rect width="900" height="560" fill="#0b1020"/>
+                  <text x="36" y="60" fill="#ffffffcc" font-size="24">After</text>
+                  <rect x="160" y="200" width="580" height="200" rx="20" fill="#D4AF37"/>
+                  <circle cx="300" cy="380" r="28" fill="#E9CA6B"/>
+                  <circle cx="600" cy="380" r="28" fill="#E9CA6B"/>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/40 text-white/80 text-xs px-3 py-1.5 rounded-full border border-white/10">Tap to toggle</div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 overflow-hidden bg-white/5">
+          <div class="relative group cursor-pointer toggle-ba" tabindex="0" role="button" aria-label="Toggle before after">
+            <div class="aspect-[16/10]">
+              <svg viewBox="0 0 900 560" class="w-full h-full block">
+                <rect width="900" height="560" fill="#0f172a"/>
+                <text x="36" y="60" fill="#ffffffaa" font-size="24">Before</text>
+                <rect x="220" y="210" width="460" height="160" rx="8" fill="#1f2937"/>
+              </svg>
+              <div class="absolute inset-0 after-layer pointer-events-none">
+                <svg viewBox="0 0 900 560" class="w-full h-full">
+                  <rect width="900" height="560" fill="#0f172a"/>
+                  <text x="36" y="60" fill="#ffffffcc" font-size="24">After</text>
+                  <rect x="220" y="210" width="460" height="160" rx="8" fill="#D4AF37"/>
+                </svg>
+              </div>
+            </div>
+            <div class="absolute bottom-3 right-3 bg-black/40 text-white/80 text-xs px-3 py-1.5 rounded-full border border-white/10">Tap to toggle</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="font-serif text-3xl sm:text-4xl">Customers Love The Shine</h2>
+        <p class="mt-3 text-white/70">Real words from New Mexico drivers.</p>
+      </div>
+
+      <div class="mt-10 relative max-w-4xl mx-auto">
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6 md:p-8">
+          <div class="flex items-center gap-3 text-luxe-gold">
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.25l-7.19-.61L12 2 9.19 8.64 2 9.25l5.46 4.72L5.82 21z"/></svg>
+          </div>
+          <blockquote class="mt-5">
+            <p class="text-xl leading-relaxed" id="reviewText">Absolutely spotless. They treated my car like a luxury ride—friendly, on time, and worth every penny.</p>
+            <footer class="mt-4 text-white/60" id="reviewAuthor">— Maria G.</footer>
+          </blockquote>
+          <div class="mt-6 flex items-center gap-2">
+            <button id="prevReview" class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition">Prev</button>
+            <button id="nextReview" class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hours & Location -->
+  <section id="hours" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6">
+          <div class="flex items-center justify-between flex-wrap gap-3">
+            <div>
+              <h2 class="font-serif text-3xl">Hours</h2>
+              <p class="text-white/60 text-sm mt-1">All times in Mountain Time (New Mexico)</p>
+            </div>
+            <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/20" id="openBadge">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span id="openBadgeText">Checking…</span>
+            </span>
+          </div>
+
+          <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Mon</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Tue</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Wed</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Thu</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Fri</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Sat</div>
+              <div class="mt-1 font-semibold">8 AM – 7 PM</div>
+            </div>
+            <div class="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div class="text-white/60 text-xs">Sun</div>
+              <div class="mt-1 font-semibold">Closed</div>
+            </div>
+          </div>
+
+          <div class="mt-4 text-white/70 text-sm" id="openDetail">We’ll confirm your nearest appointment time when you book.</div>
+        </div>
+
+        <div class="rounded-2xl border border-white/10 bg-card-grad p-6">
+          <h2 class="font-serif text-3xl">Location</h2>
+          <p class="text-white/70 mt-2">Serving Albuquerque and surrounding areas, New Mexico.</p>
+          <div class="mt-5 grid sm:grid-cols-2 gap-4">
+            <a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition" href="https://www.google.com/maps/search/?api=1&query=NM+Auto+Details+New+Mexico" target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.5 12 6.5s2.5 1.1 2.5 2.5S13.4 11.5 12 11.5z"/></svg>
+              Get Directions
+            </a>
+            <a class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition" href="sms:+15056887487">
+              <svg width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+              Text Us
+            </a>
+          </div>
+          <div class="mt-5 p-4 rounded-xl bg-black/30 border border-white/10 text-sm text-white/70">
+            Phone: <a class="underline hover:text-white" href="tel:+15056887487">(505) 688-7487</a><br/>
+            Hours: Mon–Sat 8 AM–7 PM, Sun Closed
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Booking -->
+  <section id="contact" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 to-white/0 p-6 md:p-10">
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h2 class="font-serif text-3xl sm:text-4xl">Ready to Make It Shine?</h2>
+            <p class="text-white/70 mt-2">Book online or call. We’ll confirm details and pricing quickly.</p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <button class="book-btn inline-flex items-center gap-2 bg-luxe-gold text-black font-semibold px-5 py-3 rounded-full shadow-glow gold-hover transition" data-service="">
+                Book Online
+              </button>
+              <a href="tel:+15056887487" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/15 hover:bg-white/5 transition">
+                Call (505) 688-7487
+              </a>
+              <a href="mailto:info@nmautodetails.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/15 hover:bg-white/5 transition">
+                Email Us
+              </a>
+            </div>
+
+            <div class="mt-6 text-xs text-white/60">
+              Note: The online form here is a demo for quotes/booking. For guaranteed booking, please call or text.
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+            <h3 class="font-bold">Quick Message</h3>
+            <form id="quickForm" class="mt-4 space-y-4">
+              <div>
+                <label class="text-sm text-white/70">Name</label>
+                <input required class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="Your name" />
+              </div>
+              <div>
+                <label class="text-sm text-white/70">Phone</label>
+                <input required type="tel" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="(505) 555-1234" />
+              </div>
+              <div>
+                <label class="text-sm text-white/70">Message</label>
+                <textarea rows="3" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="Tell us about your vehicle…"></textarea>
+              </div>
+              <button class="w-full bg-white/10 hover:bg-white/20 border border-white/10 rounded-xl py-3 transition">Send</button>
+              <div class="text-xs text-white/60">Demo only: Submissions show a success message here.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-serif text-3xl sm:text-4xl text-center">Questions, Answered</h2>
+      <div class="mt-8 space-y-4">
+        <details class="rounded-xl border border-white/10 bg-card-grad p-5">
+          <summary class="cursor-pointer font-semibold">How long does a full detail take?</summary>
+          <p class="mt-2 text-white/70">Most full details take 3–5 hours depending on size and condition.</p>
+        </details>
+        <details class="rounded-xl border border-white/10 bg-card-grad p-5">
+          <summary class="cursor-pointer font-semibold">Do you do mobile detailing?</summary>
+          <p class="mt-2 text-white/70">Yes—within the Albuquerque area and nearby communities in New Mexico.</p>
+        </details>
+        <details class="rounded-xl border border-white/10 bg-card-grad p-5">
+          <summary class="cursor-pointer font-semibold">What should I do before my appointment?</summary>
+          <p class="mt-2 text-white/70">Please remove personal items from the vehicle for the best results.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="font-extrabold">NM Auto Details</div>
+        <div class="text-white/60 text-sm">Premium Auto Detailing • New Mexico</div>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+15056887487" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition">Call</a>
+        <a href="sms:+15056887487" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition">Text</a>
+        <a href="mailto:info@nmautodetails.com" class="px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition">Email</a>
+      </div>
+      <div class="text-white/50 text-xs">
+        © <span id="year"></span> NM Auto Details. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative max-w-xl mx-auto mt-10 sm:mt-20 bg-luxe-ink border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-start justify-between">
+        <div>
+          <h3 class="font-serif text-2xl">Book an Appointment</h3>
+          <p class="text-white/60 text-sm">We’ll confirm details by phone or text.</p>
+        </div>
+        <button id="closeModal" class="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition" aria-label="Close">✕</button>
+      </div>
+
+      <form id="bookingForm" class="mt-5 grid sm:grid-cols-2 gap-4">
+        <div class="sm:col-span-2">
+          <label class="text-sm text-white/70">Your Name</label>
+          <input required class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="Full name" />
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Phone</label>
+          <input required type="tel" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="(505) 555-1234" />
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Email (optional)</label>
+          <input type="email" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Service</label>
+          <select class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" id="serviceSelect">
+            <option value="">Choose a service</option>
+            <option>Exterior Detail</option>
+            <option>Interior Detail</option>
+            <option>Full Detail</option>
+            <option>Ceramic Coating</option>
+            <option>Paint Correction</option>
+            <option>Headlight Restoration</option>
+            <option>Express Package</option>
+            <option>Full Detail Package</option>
+            <option>Premium Package</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-sm text-white/70">Preferred Date</label>
+          <input type="date" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" />
+        </div>
+        <div class="sm:col-span-2">
+          <label class="text-sm text-white/70">Notes</label>
+          <textarea rows="3" class="w-full mt-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 outline-none focus:ring-2 focus:ring-luxe-gold/40" placeholder="Vehicle make/model, special requests…"></textarea>
+        </div>
+        <div class="sm:col-span-2">
+          <button class="w-full bg-luxe-gold text-black font-semibold rounded-xl py-3 hover:opacity-95 transition">Request Booking</button>
+          <div class="text-xs text-white/60 mt-2">Demo only: You’ll see a confirmation here.</div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-white/10 border border-white/15 rounded-xl px-4 py-2 text-sm hidden">Copied!</div>
+
+  <script>
+    // Smooth scroll for hash links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href');
+        if(id.length>1 && document.querySelector(id)){
+          e.preventDefault();
+          document.querySelector(id).scrollIntoView({behavior:'smooth',block:'start'});
+        }
+      })
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuToggle) {
+      menuToggle.addEventListener('click', ()=>{
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Copy phone
+    const toast = document.getElementById('toast');
+    const copyBtn = document.getElementById('copyPhone');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async ()=>{
+        try {
+          await navigator.clipboard.writeText('(505) 688-7487');
+          toast.textContent = 'Phone number copied!';
+          toast.classList.remove('hidden');
+          setTimeout(()=>toast.classList.add('hidden'), 1500);
+        } catch(e){
+          toast.textContent = 'Copy not supported on this device';
+          toast.classList.remove('hidden');
+          setTimeout(()=>toast.classList.add('hidden'), 1500);
+        }
+      });
+    }
+
+    // Before/After toggles
+    document.querySelectorAll('.toggle-ba').forEach(el=>{
+      let showingAfter = true;
+      const afterLayer = el.querySelector('.after-layer');
+      const toggle = ()=>{
+        showingAfter = !showingAfter;
+        afterLayer.style.opacity = showingAfter ? '1' : '0';
+      };
+      afterLayer.style.transition = 'opacity .3s ease';
+      el.addEventListener('click', toggle);
+      el.addEventListener('keypress', (e)=>{ if(e.key==='Enter' || e.key===' ') { e.preventDefault(); toggle(); }});
+    });
+
+    // Reviews carousel (manual)
+    const reviews = [
+      { text: "Absolutely spotless. They treated my car like a luxury ride—friendly, on time, and worth every penny.", author: "— Maria G." },
+      { text: "The interior looks brand new. Stains I thought were permanent are gone. Highly recommend!", author: "— Daniel P." },
+      { text: "Professional and easy to book. The shine lasted longer than I expected. Great value.", author: "— Alicia R." },
+    ];
+    let idx = 0;
+    const reviewText = document.getElementById('reviewText');
+    const reviewAuthor = document.getElementById('reviewAuthor');
+    const prevBtn = document.getElementById('prevReview');
+    const nextBtn = document.getElementById('nextReview');
+    function setReview(i){
+      const r = reviews[i];
+      reviewText.textContent = r.text;
+      reviewAuthor.textContent = r.author;
+    }
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', ()=>{ idx = (idx - 1 + reviews.length) % reviews.length; setReview(idx); });
+      nextBtn.addEventListener('click', ()=>{ idx = (idx + 1) % reviews.length; setReview(idx); });
+    }
+
+    // Booking modal
+    const modal = document.getElementById('bookingModal');
+    const body = document.body;
+    function openModal(){
+      modal.classList.remove('hidden');
+      body.classList.add('no-scroll');
+    }
+    function closeModal(){
+      modal.classList.add('hidden');
+      body.classList.remove('no-scroll');
+    }
+    document.querySelectorAll('.book-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const service = btn.getAttribute('data-service') || '';
+        const select = document.getElementById('serviceSelect');
+        if (service && select) {
+          // Try to select a matching option
+          [...select.options].forEach((o)=>{
+            o.selected = (o.textContent === service);
+          });
+        }
+        openModal();
+      })
+    });
+    document.getElementById('closeModal').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal.firstElementChild) closeModal(); }); // backdrop
+
+    document.getElementById('bookingForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      closeModal();
+      toast.textContent = "Thanks! We'll be in touch to confirm.";
+      toast.classList.remove('hidden');
+      setTimeout(()=>toast.classList.add('hidden'), 1800);
+    });
+
+    // Quick form demo
+    document.getElementById('quickForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      toast.textContent = "Message sent! We'll reply soon.";
+      toast.classList.remove('hidden');
+      setTimeout(()=>toast.classList.add('hidden'), 1800);
+      e.target.reset();
+    });
+
+    // Live Open/Closed (New Mexico — Mountain Time)
+    const businessHours = [
+      { day: 'Sunday', open: null, close: null },
+      { day: 'Monday', open: 8*60, close: 19*60 },
+      { day: 'Tuesday', open: 8*60, close: 19*60 },
+      { day: 'Wednesday', open: 8*60, close: 19*60 },
+      { day: 'Thursday', open: 8*60, close: 19*60 },
+      { day: 'Friday', open: 8*60, close: 19*60 },
+      { day: 'Saturday', open: 8*60, close: 19*60 },
+    ];
+    const tz = 'America/Denver'; // New Mexico
+
+    function getNowMT(){
+      const now = new Date();
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: tz,
+        hour12: false,
+        weekday: 'long',
+        hour: '2-digit',
+        minute: '2-digit',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(now);
+      const map = Object.fromEntries(parts.map(p=>[p.type, p.value]));
+      const weekday = map.weekday;
+      const hour = parseInt(map.hour, 10);
+      const minute = parseInt(map.minute, 10);
+      const dayIndex = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'].indexOf(weekday);
+      return { dayIndex, minutes: hour*60 + minute, hour, minute, weekday };
+    }
+    function formatTime(mins){
+      const h24 = Math.floor(mins/60);
+      const m = mins%60;
+      const ampm = h24 >= 12 ? 'PM' : 'AM';
+      const h12 = h24 % 12 === 0 ? 12 : h24 % 12;
+      return `${h12}:${m.toString().padStart(2,'0')} ${ampm}`;
+    }
+    function nextOpen(fromDay, fromMins){
+      // if today opens later and we are before open
+      for (let offset = 0; offset < 7; offset++){
+        const d = (fromDay + offset) % 7;
+        const entry = businessHours[d];
+        if (entry.open !== null){
+          if (offset === 0 && fromMins < entry.open){
+            return { dayIndex: d, minutes: entry.open };
+          }
+          if (offset > 0){
+            return { dayIndex: d, minutes: entry.open };
+          }
+        }
+      }
+      return null;
+    }
+    function updateOpenStatus(){
+      const { dayIndex, minutes, weekday } = getNowMT();
+      const today = businessHours[dayIndex];
+      const openPill = document.getElementById('openPill');
+      const openText = document.getElementById('openText');
+      const badge = document.getElementById('openBadge');
+      const badgeText = document.getElementById('openBadgeText');
+      const detail = document.getElementById('openDetail');
+
+      let isOpen = false;
+      let message = '';
+      if (today.open !== null){
+        if (minutes >= today.open && minutes < today.close){
+          isOpen = true;
+          message = `Open now • until ${formatTime(today.close)}`;
+        } else if (minutes < today.open){
+          message = `Opens today • ${formatTime(today.open)}`;
+        } else {
+          // after close today
+          const n = nextOpen((dayIndex+1)%7, 0);
+          const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+          message = n ? `Closed • opens ${dayNames[n.dayIndex]} ${formatTime(n.minutes)}` : 'Closed';
+        }
+      } else {
+        const n = nextOpen((dayIndex+1)%7, 0);
+        const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+        message = n ? `Closed • opens ${dayNames[n.dayIndex]} ${formatTime(n.minutes)}` : 'Closed';
+      }
+
+      // Update pills
+      if (isOpen){
+        openPill.classList.remove('bg-rose-500/20','text-rose-300');
+        openPill.classList.add('bg-emerald-500/20','text-emerald-300');
+        badge.classList.remove('bg-rose-500/15','text-rose-300','border-rose-500/20');
+        badge.classList.add('bg-emerald-500/15','text-emerald-300','border-emerald-500/20');
+        openText.textContent = message;
+        badgeText.textContent = message;
+        detail.textContent = 'We’re currently open. Book now or call and we’ll confirm your time.';
+      } else {
+        openPill.classList.remove('bg-emerald-500/20','text-emerald-300');
+        openPill.classList.add('bg-rose-500/20','text-rose-300');
+        badge.classList.remove('bg-emerald-500/15','text-emerald-300','border-emerald-500/20');
+        badge.classList.add('bg-rose-500/15','text-rose-300','border-rose-500/20');
+        openText.textContent = message;
+        badgeText.textContent = message;
+        detail.textContent = 'We’re currently closed. Please book a time or leave a message—we’ll get back to you.';
+      }
+    }
+    updateOpenStatus();
+    setInterval(updateOpenStatus, 60000);
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b8f760b5e1ad0b',t:'MTc1NDU5MjY5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

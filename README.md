@@ -1,0 +1,1 @@
+# client-demo-NM-Auto-Details-
